@@ -1,12 +1,20 @@
+"use client";
+import { motion } from "framer-motion";
 import CTAButton from "./CTAButton";
 import DemoVideo from "./DemoVideo";
 import RadialBlob from "./RadialBlob";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-[3rem] relative ">
+    <div className="flex flex-col gap-[3rem] relative items-center justify-center ">
       <RadialBlob position="-top-20 -right-[30rem]" />
-      <div className="flex flex-col gap-4">
+
+      <motion.div
+        className="flex flex-col gap-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <h1 className="capitalize text-center text-5xl flex flex-col font-semibold">
           <span className=""> The social platform around file</span>
           <span className=""> sharing and monitization</span>
@@ -23,9 +31,24 @@ const Hero = () => {
             audience.
           </span>
         </p>
-      </div>
-      <CTAButton/>
-      <DemoVideo />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        
+      >
+        <CTAButton />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        <DemoVideo />
+      </motion.div>
 
       <RadialBlob position="-bottom-[30rem] -left-[30rem]" />
     </div>

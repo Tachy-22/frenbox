@@ -1,3 +1,8 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 const TestimonialCard = ({
   user,
   testimonial,
@@ -7,8 +12,24 @@ const TestimonialCard = ({
   testimonial: string;
   color?: string;
 }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <div className="rounded-xl p-4 bg-[#172121] flex flex-col gap-4 border border-gray-900/50">
+    <motion.div
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      ref={cardRef}
+      className="rounded-xl p-4 z-20 bg-[#172121] flex flex-col gap-4 border border-gray-900/50"
+    >
       <p className="text-base">{testimonial}</p>
       <div className="flex gap-2 items-center">
         <div
@@ -21,7 +42,7 @@ const TestimonialCard = ({
         </div>
         <p className="">{user}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

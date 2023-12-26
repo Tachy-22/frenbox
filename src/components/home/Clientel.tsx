@@ -1,3 +1,7 @@
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 const Clientels = [
   {
     type: "For Content Creators and Artists.",
@@ -17,6 +21,20 @@ const Clientels = [
 ];
 
 const Clientel = () => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const translateYProgress = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["2rem", "0rem"]
+  );
+
   return (
     <section className="max-w-7xl px-[2rem] xl:px-0 py-[5rem] gap-[5rem] flex flex-col">
       <h3 className="text-3xl flex flex-col ">
@@ -29,10 +47,19 @@ const Clientel = () => {
       <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-[2rem] ">
         {Clientels.map(({ type, details }, id) => {
           return (
-            <div key={id} className="flex flex-col gap-1">
+            <motion.div
+              style={{
+                scale: scaleProgress,
+                opacity: opacityProgress,
+                translateY: translateYProgress,
+              }}
+              ref={cardRef}
+              key={id}
+              className="flex flex-col gap-1"
+            >
               <p className="text-2xl  w-[90%] capitalize">{type}</p>
               <p className="py-3 text-base text-gray-500">{details}</p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
