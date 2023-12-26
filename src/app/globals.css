@@ -39,11 +39,14 @@ html {
   html {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
   }
 }
 
 * {
   /* border: 2px solid red */
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  s
 }

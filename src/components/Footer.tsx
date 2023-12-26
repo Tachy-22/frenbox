@@ -30,9 +30,9 @@ const Footer = () => {
             <div key={index} className="flex flex-col">
               <small className="pb-4 text-gray-300">{group.title}</small>
               {group.links.map((link, idx) => (
-                <p key={idx} className="">
+                <Link href={link} key={idx} className="">
                   {link}
-                </p>
+                </Link>
               ))}
             </div>
           ))}
