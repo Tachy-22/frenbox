@@ -5,11 +5,17 @@ import Link from "next/link";
 const footerLinks = [
   {
     title: "Quicklinks",
-    links: ["Support", "Contact"],
+    links:  [
+      { social: "Support", link: "/" },
+      { social: "Contact", link: "/" },
+    ],
   },
   {
     title: "Social",
-    links: ["Twitter", "LinkedIn"],
+    links: [
+      { social: "Twitter", link: "/" },
+      { social: "LinkedIn", link: "/" },
+    ],
   },
 ];
 
@@ -29,9 +35,13 @@ const Footer = () => {
           {footerLinks.map((group, index) => (
             <div key={index} className="flex flex-col">
               <small className="pb-4 text-gray-300">{group.title}</small>
-              {group.links.map((link, idx) => (
-                <Link href={link} key={idx} className="">
-                  {link}
+              {group.links.map(({ link, social }, idx) => (
+                <Link
+                  href={link}
+                  key={idx}
+                  className="hover:underline underline-offset-2"
+                >
+                  {social}
                 </Link>
               ))}
             </div>

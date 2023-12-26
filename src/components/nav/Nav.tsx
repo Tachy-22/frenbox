@@ -18,7 +18,7 @@ const Nav: React.FC<NavProps> = () => {
       <ul className="flex gap-4">
         {navLinks.map((link, index) => (
           <li key={index}>
-            <Link className="text-sm" href={link.path}>
+            <Link className="text-sm hover:underline underline-offset-2" href={link.path}>
               {link.text}
             </Link>
           </li>

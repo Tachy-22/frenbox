@@ -15,7 +15,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="capitalize text-center mdl:text-5xl text-xl  flex flex-col font-semibold">
+        <h1 className="capitalize text-center md:text-5xl text-xl  flex flex-col font-semibold">
           <span className=""> The social platform around file</span>
           <span className=""> sharing and monitization</span>
         </h1>

@@ -40,13 +40,13 @@ html {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     scroll-behavior: smooth;
-    scroll-snap-type: mandatory;
+    scroll-snap-type:x  mandatory;
   }
 }
 
 * {
   /* border: 2px solid red */
   scroll-behavior: smooth;
-  scroll-snap-type: mandatory;
-  s
+  scroll-snap-type:x  mandatory;
+
 }
