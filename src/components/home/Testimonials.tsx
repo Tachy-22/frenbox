@@ -60,9 +60,9 @@ const TestimonialData = [
 
 const Testimonials = () => {
   return (
-    <section className="relative pt-[6rem] pb-[5rem] w-full rounded-[5rem] border border-gray-700 overflow-hidden ">
+    <section className="relative py-[1rem] md:pt-[6rem] md:pb-[5rem] w-full rounded-[2rem] md:rounded-[5rem] border border-gray-700 overflow-hidden ">
       <RadialBlob position="-top-10 -right-[10rem]" />
-      <h3 className=" text-4xl text-center z-20 py-[5rem]">
+      <h3 className=" text-4xl text-center z-20 md:py-[5rem] py-[2rem]">
         Here’s what people have said about Frenbox 🤭
       </h3>
       <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4 max-w-[80vw] mx-auto z-20">

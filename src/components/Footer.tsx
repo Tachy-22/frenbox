@@ -25,7 +25,7 @@ const Footer = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-6 pt-[3rem] md:pt-0">
           {footerLinks.map((group, index) => (
             <div key={index} className="flex flex-col">
               <small className="pb-4 text-gray-300">{group.title}</small>

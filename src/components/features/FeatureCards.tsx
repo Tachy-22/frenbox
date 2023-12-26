@@ -12,8 +12,8 @@ const FeatureCards = ({
   tags: string[];
 }) => {
   return (
-    <div className="border rounded-xl border-gray-700 flex flex-col gap-4 p-[2rem]">
-      <span className="flex gap-2 bg-gray-700/60 rounded-3xl p-1 px-3 items-center w-fit">
+    <div className="border rounded-xl border-gray-700 flex flex-col gap-4 p-[1rem] md:p-[2rem]">
+      <span className="flex gap-2 bg-gray-700/60 rounded-3xl p-1 px-2 md:px-3 items-center w-fit">
         <LogoIcon />
         <span>{description}</span>
       </span>

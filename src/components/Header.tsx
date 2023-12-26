@@ -6,9 +6,11 @@ import SignIn from "./nav/SignIn";
 const Header = () => {
   return (
     <header className="sticky top-0 flex flex-col z-30">
-      <div className="w-full flex justify-between md:px-[1rem] py-[1rem]  items-center backdrop-blur-2xl">
+      <div className="w-full flex justify-between px-[1rem] py-[1rem]  items-center backdrop-blur-2xl">
         <Logo />
-        <Nav />
+        <div className="md:flex- hidden ">
+          <Nav />
+        </div>
         <SignIn />
       </div>
       <ProgressBar />

@@ -36,7 +36,7 @@ const Clientel = () => {
   );
 
   return (
-    <section className="max-w-7xl px-[2rem] xl:px-0 py-[5rem] gap-[5rem] flex flex-col">
+    <section className="max-w-7xl px-[2rem] xl:px-0 py-[5rem] md:gap-[5rem]  flex flex-col">
       <h3 className="text-3xl flex flex-col ">
         <span className="">Frenbox:</span>
         <span className="">

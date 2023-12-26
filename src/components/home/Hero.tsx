@@ -6,7 +6,7 @@ import RadialBlob from "./RadialBlob";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-[3rem] relative items-center justify-center ">
+    <div className="flex flex-col gap-[3rem] relative items-center justify-center w-screen md:w-fit px-4 md:px-0 ">
       <RadialBlob position="-top-20 -right-[30rem]" />
 
       <motion.div
@@ -15,11 +15,11 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="capitalize text-center text-5xl flex flex-col font-semibold">
+        <h1 className="capitalize text-center mdl:text-5xl text-xl  flex flex-col font-semibold">
           <span className=""> The social platform around file</span>
           <span className=""> sharing and monitization</span>
         </h1>
-        <p className=" text-center flex flex-col text-gray-300">
+        <p className=" text-center  text-sm flex flex-col text-gray-300">
           <span>
             {" "}
             Frenbox is a cloud-based storage platform that helps creators to

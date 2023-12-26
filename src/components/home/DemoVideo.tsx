@@ -15,7 +15,7 @@ const DemoVideo = () => {
   };
 
   return (
-    <div className="w-[60rem] h-full bg-gray-400 rounded-lg mt-[5rem]">
+    <div className="md:w-[60rem] h-full  bg-gray-400 rounded-lg mt-[5rem]">
       <YouTube videoId={videoId} opts={opts} />
     </div>
   );

@@ -44,13 +44,13 @@ const FeatureCardData = [
 
 const Features = () => {
   return (
-    <section className="bg-[#172121] flex flex-col gap-[4rem] rounded-[5rem] max-w-7xl mt-[10rem]  border border-gray-700 p-[4rem] z-20 mx-auto">
+    <section className="bg-[#172121] flex flex-col gap-[3rem] md:gap-[4rem] rounded-[2rem] md:rounded-[5rem] max-w-full md:max-w-7xl mt-[10rem]  border border-gray-700 md:p-[4rem] p-[2rem] z-20 mx-auto">
       <div className="">
-        <h2 className="text-start text-3xl font-bold ">
+        <h2 className="text-center md:text-start text-2xl md:text-3xl font-bold ">
           Empowering
           <span className="text-blue-600 px-1">Creators:</span>
         </h2>
-        <h2 className="text-start text-3xl font-bold ">
+        <h2 className="text-center md:text-start text-2xl md:text-3xl font-bold ">
           Frenbox
           <span className="text-blue-600 italic px-1">features</span> at a
           glance
