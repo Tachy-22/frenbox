@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import YouTube from "react-youtube";
+import RadialBlob from "./RadialBlob";
 
 const DemoVideo = () => {
   const videoId = "cQgKOLsAb-Q"; // Replace with your YouTube video ID
@@ -15,9 +16,11 @@ const DemoVideo = () => {
   };
 
   return (
-    <div className="md:w-[60rem] h-full z-20 bg-gray-400 rounded-lg mt-[5rem]">
-      <YouTube videoId={videoId} opts={opts} />
-    </div>
+    <>
+      <div className="md:w-[60rem] h-[30rem]  z-0 bg-gray-400  rounded-lg mt-[5rem]">
+        <YouTube videoId={videoId} opts={opts} />
+      </div>
+    </>
   );
 };
 

@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="flex md:flex-row flex-col justify-between items-center w-full mx-auto max-w-[85%] p-[3rem]  ">
         <div className="flex flex-col gap-[3rem] ">
           <Logo size={`2xl`} />
-          <span className="flex  rounded-[5rem] transition-colors duration-500 border border-blue-400 hover:bg-blue-300/30 px-4 py-2 gap-3">
+          <span className="flex   rounded-[5rem] transition-colors duration-500 border border-blue-400 hover:bg-blue-300/30 px-4 py-2 gap-3">
             <MailIcon />
             <a href="mailto:contact@frenbox.com">contact@frenbox.com</a>
           </span>
