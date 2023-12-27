@@ -33,16 +33,13 @@ const Nav: React.FC<NavProps> = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute top-20 left-0   bg-blue-00/80 z-50 w-screen flex items-center justify-center transition-transform duration-300 ease-in-out ${
+        className={`absolute backdrop-blur-3xl top-20 left-0   bg-blue-00/80 z-50 w-screen flex items-center justify-center transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "" : "translate-x-full "
         }`}
       >
         <ul className="flex gap-4 flex-col items-center py-[1rem] h-full w-full backdrop-blur-3xl bg-blue-00/80">
           {navLinks.map((link, index) => (
-            <li
-              key={index}
-              className=" w-full text-center bg-black "
-            >
+            <li key={index} className=" w-full text-center bg-black ">
               <Link
                 className="text-sm text-gray-100 w-full hover:underline underline-offset-2 hover:border-b hover:border-b-blue-300"
                 href={link.path}
@@ -58,7 +55,7 @@ const Nav: React.FC<NavProps> = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-4">
-        {navLinks.slice(0,4).map((link, index) => (
+        {navLinks.slice(0, 4).map((link, index) => (
           <li key={index}>
             <Link
               className="text-sm hover:underline underline-offset-2"
